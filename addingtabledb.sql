@@ -37,6 +37,7 @@ create table penjualan_barang (
     id_user int,
     total_pembelian int(4),
     harga_total bigint,
+    tanggal_beli datetime,
     FOREIGN key (id_barang) REFERENCES barang (id),
     FOREIGN key (id_user) REFERENCES users(id)
 );
