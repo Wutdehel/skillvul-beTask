@@ -1,0 +1,1 @@
+drop DATABASE online_retail;
