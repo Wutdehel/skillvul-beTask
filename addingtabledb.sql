@@ -4,40 +4,40 @@ CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(20) NOT NULL,
     password VARCHAR(16) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    nomor_telepon VARCHAR(20),
-    alamat TEXT
+    email VARCHAR(50) NOT NULL UNIQUE,
+    phone_number VARCHAR(20),
+    address TEXT
 );
 
 -- @block
 
-CREATE TABLE kategori_barang (
+CREATE TABLE product_categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nama_kategori VARCHAR(50) NOT NULL
+    category_name VARCHAR(50) NOT NULL
 );
 
 -- @block
 
-CREATE TABLE barang (
+CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nama_barang VARCHAR(255) NOT NULL,
-    harga int NOT NULL,
+    product_name VARCHAR(255) NOT NULL,
+    price int NOT NULL,
     stock INT NOT NULL,
-    detail_barang TEXT,
-    id_kategori INT,
-    FOREIGN KEY (id_kategori) REFERENCES kategori_barang(id)
+    product_detail TEXT,
+    category_id INT,
+    FOREIGN KEY (category_id) REFERENCES product_categories(id)
 );
 
 
 -- @block 
 
-create table penjualan_barang (
+create table purchases (
     id int AUTO_INCREMENT PRIMARY KEY,
-    id_barang int,
-    id_user int,
-    total_pembelian int(4),
-    harga_total bigint,
-    tanggal_beli datetime,
-    FOREIGN key (id_barang) REFERENCES barang (id),
-    FOREIGN key (id_user) REFERENCES users(id)
+    product_id int,
+    user_id int,
+    total_purchases int(4),
+    total_price bigint,
+    purchase_date datetime,
+    FOREIGN key (product_id) REFERENCES products(id),
+    FOREIGN key (user_id) REFERENCES users(id)
 );

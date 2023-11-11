@@ -1,8 +1,8 @@
 -- @block
 
-SELECT barang.id, barang.nama_barang, COUNT(*) as total_pembelian
-FROM penjualan_barang AS penjualan
-JOIN barang  ON penjualan.id_barang = barang.id
-GROUP BY barang.id
+SELECT products.id, products.product_name, COUNT(*) as total_pembelian
+FROM purchases AS penjualan
+JOIN products  ON penjualan.product_id = products.id
+GROUP BY products.id
 ORDER BY total_pembelian DESC
 LIMIT 3;

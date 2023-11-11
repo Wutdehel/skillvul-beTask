@@ -1,12 +1,12 @@
-SELECT kategori_barang.nama_kategori, COUNT(barang.id) as jumlah_barang
-FROM kategori_barang 
-JOIN barang ON kategori_barang.id = barang.id_kategori
-GROUP BY kategori_barang.id
+SELECT product_categories.category_name, COUNT(products.id) as jumlah_barang
+FROM product_categories 
+JOIN products ON product_categories.id = products.category_id
+GROUP BY product_categories.id
 ORDER BY jumlah_barang DESC
 LIMIT 1;
 
 
 -- @block
-INSERT into barang (nama_barang, harga, stock, detail_barang, id_kategori) 
+INSERT into products (product_name, price, stock, product_detail, category_id) 
 VALUES 
       ('Victus Laptop HP', 15000000, 10, 'Laptop gaming kelas atas', 1);

@@ -1,11 +1,11 @@
-DELETE FROM penjualan_barang
+DELETE FROM purchases
 WHERE id = 1;
 
 DELETE FROM users
 WHERE id = 1;
 
-DELETE FROM barang
+DELETE FROM products
 WHERE id = 1;
 
-DELETE FROM kategori_barang
+DELETE FROM product_categories
 WHERE id = 1;

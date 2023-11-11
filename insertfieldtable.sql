@@ -1,6 +1,6 @@
 -- @block
 
-INSERT INTO users (username, password, email, nomor_telepon, alamat)
+INSERT INTO users (username, password, email, phone_number, address)
 VALUES
   ('john doe', 'password123', 'john.doe@example.com', '+62 21 12345678', 'Jalan Sudirman No. 123, Jakarta Pusat'),
   ('jane smith', 'pass456', 'jane.smith@example.com', '+62 31 98765432', 'Jalan Diponegoro No. 45, Surabaya'),
@@ -15,7 +15,7 @@ VALUES
 
 -- @block
 
-insert into kategori_barang (nama_kategori) VALUES
+insert into product_categories (category_name) VALUES
 ('Elektronik'),
   ('Pakaian'),
   ('Alat Masak'),
@@ -28,7 +28,7 @@ insert into kategori_barang (nama_kategori) VALUES
   ('Olahraga');
 
 -- @block
-INSERT INTO barang (nama_barang, harga, stock, detail_barang, id_kategori)
+INSERT INTO products (product_name, price, stock, product_detail, category_id)
 VALUES
   ('Laptop ASUS ROG', 15000000, 10, 'Laptop gaming kelas atas', 1),
   ('Celana Jeans', 500000, 50, 'Celana jeans model terbaru', 2),
@@ -44,7 +44,7 @@ VALUES
 
 -- @block
 
-INSERT INTO penjualan_barang (id_barang, id_user, total_pembelian, harga_total, tanggal_beli)
+INSERT INTO purchases (product_id, user_id, total_purchases, total_price, purchase_date)
 VALUES
   (1, 1, 2, 30000000, '2023-10-25'),
   (2, 2, 3, 1500000, '2023-10-26'),

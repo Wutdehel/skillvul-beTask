@@ -1,7 +1,7 @@
-DROP TABLE penjualan_barang;
+DROP TABLE purchases;
 
 DROP TABLE users;
 
-DROP TABLE barang;
+DROP TABLE products;
 
-DROP TABLE kategori_barang;
+DROP TABLE product_categories;

@@ -3,11 +3,11 @@
 
 SELECT * FROM users;
 
-SELECT * FROM barang;
+SELECT * FROM products;
 
-SELECT * FROM kategori_barang;
+SELECT * FROM product_categories;
 
-SELECT * FROM penjualan_barang;
+SELECT * FROM purchases;
 
 -- @block
 
@@ -15,8 +15,8 @@ SELECT * FROM penjualan_barang;
 
 SELECT * FROM users WHERE id = 1;
 
-SELECT * FROM barang WHERE id = 1;
+SELECT * FROM products WHERE id = 1;
 
-SELECT * FROM kategori_barang WHERE id = 1;
+SELECT * FROM product_categories WHERE id = 1;
 
-SELECT * FROM penjualan_barang WHERE id = 1;
+SELECT * FROM purchases WHERE id = 1;
